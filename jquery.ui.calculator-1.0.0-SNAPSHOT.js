@@ -126,9 +126,11 @@
 	 * @return {string} HTML de la interfaz de usuario
 	 */
 	$.fn.calculator.buildUi = function() {
+		var displayBackGround= 'background: url("images/ui-bg_inset-soft_100_daecda_1x100.png") repeat-x scroll 50% 50% rgb(218, 236, 218);';
 		var htmlUi = "";
-		htmlUi = htmlUi + "<a style='width:105px;text-align:right;' id='operation'>Operacion</a>";
-		htmlUi = htmlUi + "<a style='width:37px;' id='buttonClear'>C</a>";
+		
+		htmlUi = htmlUi + "<a style='width:105px;text-align:right;'" + displayBackGround + " id='operation'>Operacion</a>";
+		htmlUi = htmlUi + "<a style='width:30px;' id='buttonClear'>C</a>";
 		
 		htmlUi = htmlUi + "<a id='button7'>7</a>";
 		htmlUi = htmlUi + "<a id='button8'>8</a>";
