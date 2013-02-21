@@ -128,6 +128,7 @@
 	 */
 	$.fn.calculator.buildUi = function() {
 		var htmlUi = "";
+		htmlUi = htmlUi + "<a style='width:200px;text-align:right;' id='operation'>Operacion</a>";
 		htmlUi = htmlUi + "<a id='button1'>1</a>";
 		htmlUi = htmlUi + "<a id='button2'>2</a>";
 		htmlUi = htmlUi + "<a id='button3'>3</a>";
@@ -143,8 +144,7 @@
 		htmlUi = htmlUi + "<a id='buttonMultiplication'>*</a>";
 		htmlUi = htmlUi + "<a id='buttonDivision'>/</a>";
 		htmlUi = htmlUi + "<a id='buttonResult'>=</a>";
-		htmlUi = htmlUi + "<a id='buttonClear'>C</a>";
-		htmlUi = htmlUi + "<a id='operation'>Operacion</a>";
+		htmlUi = htmlUi + "<a id='buttonClear'>C</a>";		
 		return htmlUi;
 	};
 	
