@@ -51,9 +51,8 @@
 			//Establece la configuracion del elemento
 			$(this)
 				.css({
-					"height":"40px",
-					"width":"auto",
-					"bottom":"0px",
+					"height":"155px",
+					"width":"147px",					
 					"left":"100px",
 					"position":"fixed",
 					"z-index":"1000",
@@ -128,23 +127,29 @@
 	 */
 	$.fn.calculator.buildUi = function() {
 		var htmlUi = "";
-		htmlUi = htmlUi + "<a style='width:200px;text-align:right;' id='operation'>Operacion</a>";
-		htmlUi = htmlUi + "<a id='button1'>1</a>";
-		htmlUi = htmlUi + "<a id='button2'>2</a>";
-		htmlUi = htmlUi + "<a id='button3'>3</a>";
-		htmlUi = htmlUi + "<a id='button4'>4</a>";
-		htmlUi = htmlUi + "<a id='button5'>5</a>";
-		htmlUi = htmlUi + "<a id='button6'>6</a>";
+		htmlUi = htmlUi + "<a style='width:134px;text-align:right;' id='operation'>Operacion</a>";
+		htmlUi = htmlUi + "<a style='width:8px;' id='buttonClear'>C</a>";
+		
 		htmlUi = htmlUi + "<a id='button7'>7</a>";
 		htmlUi = htmlUi + "<a id='button8'>8</a>";
 		htmlUi = htmlUi + "<a id='button9'>9</a>";
-		htmlUi = htmlUi + "<a id='button0'>0</a>";
-		htmlUi = htmlUi + "<a id='buttonAddition'>+</a>";
-		htmlUi = htmlUi + "<a id='buttonSubtraction'>-</a>";
-		htmlUi = htmlUi + "<a id='buttonMultiplication'>*</a>";
 		htmlUi = htmlUi + "<a id='buttonDivision'>/</a>";
+		
+		htmlUi = htmlUi + "<a id='button4'>4</a>";
+		htmlUi = htmlUi + "<a id='button5'>5</a>";
+		htmlUi = htmlUi + "<a id='button6'>6</a>";
+		htmlUi = htmlUi + "<a id='buttonMultiplication'>*</a>";
+		
+		htmlUi = htmlUi + "<a id='button1'>1</a>";
+		htmlUi = htmlUi + "<a id='button2'>2</a>";
+		htmlUi = htmlUi + "<a id='button3'>3</a>";
+		htmlUi = htmlUi + "<a id='buttonSubtraction'>-</a>";
+		
+		htmlUi = htmlUi + "<a id='button0'>0</a>";
+		htmlUi = htmlUi + "<a id='buttonDot'>.</a>";
 		htmlUi = htmlUi + "<a id='buttonResult'>=</a>";
-		htmlUi = htmlUi + "<a id='buttonClear'>C</a>";		
+		htmlUi = htmlUi + "<a id='buttonAddition'>+</a>"		
+				
 		return htmlUi;
 	};
 	
