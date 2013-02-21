@@ -127,8 +127,8 @@
 	 */
 	$.fn.calculator.buildUi = function() {
 		var htmlUi = "";
-		htmlUi = htmlUi + "<a style='width:134px;text-align:right;' id='operation'>Operacion</a>";
-		htmlUi = htmlUi + "<a style='width:8px;' id='buttonClear'>C</a>";
+		htmlUi = htmlUi + "<a style='width:105px;text-align:right;' id='operation'>Operacion</a>";
+		htmlUi = htmlUi + "<a style='width:37px;' id='buttonClear'>C</a>";
 		
 		htmlUi = htmlUi + "<a id='button7'>7</a>";
 		htmlUi = htmlUi + "<a id='button8'>8</a>";
@@ -178,6 +178,7 @@
 				case '-': operation = operation + '-'; break;
 				case '*': operation = operation + '*'; break;
 				case '/': operation = operation + '/'; break;
+				case '.': operation = operation + '.'; break;				
 				case '=': 					
 					stringResult = eval(operation.length > 0 ?operation:''); 
 					$(element).find("a#operation span.ui-button-text").text(stringResult); 
