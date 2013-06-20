@@ -51,19 +51,23 @@
 			//Establece la configuracion del elemento
 			$(this)
 				.css({
-					"height":"155px",
+					"height":"250px",
 					"width":"200px",					
 					"left":"100px",
 					"position":"fixed",
 					"z-index":"1000",
-					"background-color": '#fff' //options.css.background
+					"background-color", '#fff',//options.css.background
+					"padding" : "7px 0 0 5px",
+                                        "display" : "none"
 				});
 				
 			//Le damos la caracteristica de movible
 			$(this).draggable();
 			//Define las funciones de los botones
 			$.fn.calculator.defineFunctions(this, options.result);
-		}
+                        $(this).show(options.animate);
+		},
+         open : function(){ $(this).show(); }
 	};
 
 	/**
@@ -129,8 +133,8 @@
 		var displayBackGround= 'background: url("images/ui-bg_inset-soft_100_daecda_1x100.png") repeat-x scroll 50% 50% rgb(218, 236, 218);';
 		var htmlUi = "";
 		
-		htmlUi = htmlUi + "<div><a style='width:80%;text-align:right;'" + displayBackGround + " id='operation'>Operacion</a>";
-		htmlUi = htmlUi + "<a style='width:20%;' id='buttonClear'>C</a></div>";
+		htmlUi = htmlUi + "<div><a style='width:70%;text-align:right;'" + displayBackGround + " id='operation'>Operacion</a>";
+		htmlUi = htmlUi + "<ai d='buttonClear'>C</a></div>";
 		
 		htmlUi += "<div>" +
 		          "<a id='button7'>7</a>" +
@@ -153,10 +157,12 @@
 			  "<a id='buttonSubtraction'>-</a>" +
 			  "</div>";
 		
-		htmlUi = htmlUi + "<a id='button0'>0</a>";
-		htmlUi = htmlUi + "<a id='buttonDot'>.</a>";
-		htmlUi = htmlUi + "<a id='buttonResult'>=</a>";
-		htmlUi = htmlUi + "<a id='buttonAddition'>+</a>"		
+		htmlUi += "<div>" +
+			  "<a id='buttonDot'>.</a>" +
+		  	  "<a id='button0'>0</a>" +
+			  "<a id='buttonResult'>=</a>" +
+			  "<a id='buttonAddition'>+</a>" +
+			  "</div>";
 				
 		return htmlUi;
 	};
@@ -212,7 +218,9 @@
 		css: {
 			background : '#FFF'
 		},
-		command: 'init'
+		command: 'init',
+                animation : 'fold',
+                autoShow : true
 	};
 
 })(jQuery);
