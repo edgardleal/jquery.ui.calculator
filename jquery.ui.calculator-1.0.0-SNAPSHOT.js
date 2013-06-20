@@ -52,7 +52,7 @@
 			$(this)
 				.css({
 					"height":"155px",
-					"width":"147px",					
+					"width":"200px",					
 					"left":"100px",
 					"position":"fixed",
 					"z-index":"1000",
@@ -129,23 +129,29 @@
 		var displayBackGround= 'background: url("images/ui-bg_inset-soft_100_daecda_1x100.png") repeat-x scroll 50% 50% rgb(218, 236, 218);';
 		var htmlUi = "";
 		
-		htmlUi = htmlUi + "<div><a style='width:105px;text-align:right;'" + displayBackGround + " id='operation'>Operacion</a></div>";
-		htmlUi = htmlUi + "<a style='width:30px;' id='buttonClear'>C</a>";
+		htmlUi = htmlUi + "<div><a style='width:80%;text-align:right;'" + displayBackGround + " id='operation'>Operacion</a>";
+		htmlUi = htmlUi + "<a style='width:20%;' id='buttonClear'>C</a></div>";
 		
-		htmlUi = htmlUi + "<a id='button7'>7</a>";
-		htmlUi = htmlUi + "<a id='button8'>8</a>";
-		htmlUi = htmlUi + "<a id='button9'>9</a>";
-		htmlUi = htmlUi + "<a id='buttonDivision'>/</a>";
+		htmlUi += "<div>" +
+		          "<a id='button7'>7</a>" +
+		          "<a id='button8'>8</a>" +
+			  "<a id='button9'>9</a>" +
+		 	  "<a id='buttonDivision'>/</a>" +
+		 	  "</div>";
 		
-		htmlUi = htmlUi + "<a id='button4'>4</a>";
-		htmlUi = htmlUi + "<a id='button5'>5</a>";
-		htmlUi = htmlUi + "<a id='button6'>6</a>";
-		htmlUi = htmlUi + "<a id='buttonMultiplication'>*</a>";
+		htmlUi += "<div>" +
+			  "<a id='button4'>4</a>" +
+		   	  "<a id='button5'>5</a>" +
+			  "<a id='button6'>6</a>" +
+			  "<a id='buttonMultiplication'>*</a>" +
+			  "</div>";
 		
-		htmlUi = htmlUi + "<a id='button1'>1</a>";
-		htmlUi = htmlUi + "<a id='button2'>2</a>";
-		htmlUi = htmlUi + "<a id='button3'>3</a>";
-		htmlUi = htmlUi + "<a id='buttonSubtraction'>-</a>";
+		htmlUi += "<div>" +
+		      	  "<a id='button1'>1</a>" +
+			  "<a id='button2'>2</a>" +
+			  "<a id='button3'>3</a>" +
+			  "<a id='buttonSubtraction'>-</a>" +
+			  "</div>";
 		
 		htmlUi = htmlUi + "<a id='button0'>0</a>";
 		htmlUi = htmlUi + "<a id='buttonDot'>.</a>";
